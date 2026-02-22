@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌙 ঈদ অফার - ফ্রি ১০GB ইন্টারনেট!</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Stars Background */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #ffd700;
+            border-radius: 50%;
+            animation: twinkle 2s infinite;
+        }
+
+        .moon {
+            position: absolute;
+            top: 30px;
+            right: 8%;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #ffd700, #ffeb3b);
+            border-radius: 50%;
+            box-shadow: 0 0 40px #ffd700, 0 0 80px #ffd700;
+            animation: moonGlow 3s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        @keyframes moonGlow {
+            from { box-shadow: 0 0 30px #ffd700; }
+            to { box-shadow: 0 0 60px #ffd700, 0 0 100px #ffeb3b; }
+        }
+
+        /* Header */
+        .header {
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+            padding: 12px 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid rgba(255,215,0,0.3);
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            color: #ffd700;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, #ffd700, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 100px 5% 30px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .eid-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #ffd700, #ff6b6b);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 15px;
+            animation: pulse 2s infinite;
+            box-shadow: 0 5px 25px rgba(255,215,0,0.4);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #ffd700, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Animated Gift */
+        .gift-animation {
+            margin: 25px auto;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+
+        .gift-box-main {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            border-radius: 12px;
+            position: relative;
+            animation: bounce 1.5s infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(255,107,107,0.4);
+        }
+
+        .gift-box-main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 100%;
+            background: linear-gradient(135deg, #ffd700, #ff9800);
+        }
+
+        .gift-box-main::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(135deg, #ffd700, #ff9800);
+        }
+
+        .gift-box-main i {
+            font-size: 2rem;
+            color: #fff;
+            z-index: 10;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            25% { transform: translateY(-8px) rotate(-3deg); }
+            75% { transform: translateY(-8px) rotate(3deg); }
+        }
+
+        /* Main Card */
+        .main-card {
+            max-width: 450px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 30px 20px;
+            border: 2px solid rgba(255,215,0,0.25);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+        }
+
+        .card-title {
+            color: #fff;
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .card-title i {
+            color: #ffd700;
+        }
+
+        .card-subtitle {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Progress */
+        .progress-section {
+            margin: 20px 0;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .progress-count {
+            background: linear-gradient(135deg, #ffd700, #ff9800);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-weight: bold;
+            color: #000;
+            font-size: 0.85rem;
+        }
+
+        .progress-bar-bg {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            height: 28px;
+            overflow: hidden;
+            border: 1px solid rgba(255,215,0,0.2);
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ffd700, #00ff88, #00d9ff);
+            background-size: 200% 100%;
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.6s ease;
+            animation: shimmer 2s linear infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 45px;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        .progress-bar-fill span {
+            color: #000;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .milestones {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .milestone.done {
+            color: #00ff88;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: rgba(255,215,0,0.1);
+            border: 1px solid rgba(255,215,0,0.25);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .info-box h4 {
+            color: #ffd700;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .info-box ul {
+            list-style: none;
+            color: rgba(255,255,255,0.85);
+            font-size: 0.85rem;
+        }
+
+        .info-box li {
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-box li i {
+            color: #00ff88;
+            font-size: 0.9rem;
+        }
+
+        /* Buttons */
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        /* Gift Button */
+        .gift-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #ffd700, #ff9800);
+            color: #000;
+            border: none;
+            border-radius: 14px;
+            font-size: 1.15rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(255,215,0,0.35);
+        }
+
+        .gift-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: btnShine 2s infinite;
+        }
+
+        @keyframes btnShine {
+            to { left: 100%; }
+        }
+
+        .gift-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255,215,0,0.5);
+        }
+
+        .gift-btn:active {
+            transform: scale(0.98);
+        }
+
+        .gift-btn .icon {
+            font-size: 1.3rem;
+            animation: wiggle 1s infinite;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
+        }
+
+        .gift-btn .badge {
+            background: #ff6b6b;
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            margin-left: 5px;
+        }
+
+        /* Share Button */
+        .share-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #00d9ff, #0066ff);
+            color: #fff;
+            border: none;
+            border-radius: 14px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,217,255,0.4);
+        }
+
+        /* Social Grid */
+        .social-section {
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .social-title {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+
+        .social-btn {
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            color: #fff;
+            font-size: 0.65rem;
+        }
+
+        .social-btn i { font-size: 1.2rem; }
+
+        .social-btn.fb { background: linear-gradient(135deg, #1877f2, #0d47a1); }
+        .social-btn.wa { background: linear-gradient(135deg, #25d366, #128c7e); }
+        .social-btn.tg { background: linear-gradient(135deg, #0088cc, #005f8f); }
+        .social-btn.cp { background: linear-gradient(135deg, #666, #444); }
+
+        .social-btn:hover { transform: translateY(-2px); }
+
+        /* Claim Section */
+        .claim-section {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .claim-section.show { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .claim-card {
+            background: linear-gradient(135deg, #00ff88, #00b359);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .claim-card h3 {
+            color: #000;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .claim-card p {
+            color: rgba(0,0,0,0.7);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .claim-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .claim-input {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .claim-submit {
+            padding: 12px;
+            background: #000;
+            color: #00ff88;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .claim-submit:hover { background: #222; }
+
+        /* Loading Overlay */
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading-overlay.show { display: flex; }
+
+        .loading-box {
+            text-align: center;
+            color: #fff;
+            max-width: 350px;
+            padding: 20px;
+        }
+
+        .loading-icon {
+            font-size: 4rem;
+            color: #ffd700;
+            animation: bounce 0.6s infinite;
+            margin-bottom: 20px;
+        }
+
+        .loading-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        .loading-box p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .loading-progress-bar {
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            height: 20px;
+            overflow: hidden;
+            margin: 15px 0;
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+
+        .loading-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ffd700, #00ff88);
+            width: 0%;
+            transition: width 0.4s;
+            border-radius: 6px;
+        }
+
+        .loading-steps {
+            text-align: left;
+            margin-top: 15px;
+        }
+
+        .load-step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            margin: 5px 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            border-left: 3px solid transparent;
+            transition: 0.3s;
+        }
+
+        .load-step.active {
+            background: rgba(255,215,0,0.15);
+            border-left-color: #ffd700;
+        }
+
+        .load-step.done {
+            background: rgba(0,255,136,0.1);
+            border-left-color: #00ff88;
+        }
+
+        .load-step-icon {
+            width: 24px;
+            height: 24px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+        }
+
+        .load-step.active .load-step-icon {
+            background: #ffd700;
+            color: #000;
+        }
+
+        .load-step.done .load-step-icon {
+            background: #00ff88;
+            color: #000;
+        }
+
+        /* Operators */
+        .operators {
+            padding: 40px 5%;
+        }
+
+        .section-heading {
+            text-align: center;
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+        }
+
+        .section-heading i { color: #ffd700; }
+
+        .operator-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .op-card {
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            border-top: 3px solid;
+            transition: 0.3s;
+        }
+
+        .op-card:hover {
+            transform: translateY(-3px);
+            border-color: #ffd700 !important;
+        }
+
+        .op-card.gp { border-color: #4CAF50; }
+        .op-card.robi { border-color: #e91e63; }
+        .op-card.bl { border-color: #ff9800; }
+        .op-card.airtel { border-color: #f44336; }
+
+        .op-card h4 {
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .op-card p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.8rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0,0,0,0.4);
+            padding: 25px 5%;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            border-top: 1px solid rgba(255,215,0,0.2);
+            font-size: 0.85rem;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 3000;
+        }
+
+        .modal.show { display: flex; }
+
+        .modal-box {
+            background: linear-gradient(135deg, #1a0a2e, #2d1b4e);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 350px;
+            width: 90%;
+            color: #fff;
+            animation: zoomIn 0.3s ease;
+            border: 2px solid #ffd700;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #00ff88, #00b359);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 2rem;
+        }
+
+        .modal-box h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .modal-box p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .modal-btn {
+            background: linear-gradient(135deg, #ffd700, #ff9800);
+            color: #000;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: rgba(0,0,0,0.95);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 4000;
+            transition: 0.3s;
+            border-left: 4px solid #ffd700;
+            font-size: 0.9rem;
+            max-width: 90%;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .toast i { color: #ffd700; }
+
+        /* Confetti */
+        .confetti {
+            position: fixed;
+            top: -10px;
+            width: 10px;
+            height: 10px;
+            animation: fall 3s linear forwards;
+            z-index: 3001;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.6rem; }
+            .hero h1 .highlight { font-size: 2rem; }
+            .main-card { padding: 25px 15px; }
+            .eid-badge { font-size: 0.85rem; padding: 8px 18px; }
+            .gift-btn { font-size: 1rem; padding: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Stars Background -->
+    <div class="stars" id="stars">
+        <div class="moon"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-moon"></i>
+            ঈদ<span>অফার</span>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="eid-badge">
+            <i class="fas fa-star"></i>
+            🌙 ঈদ মোবারক 🌙
+            <i class="fas fa-star"></i>
+        </div>
+        
+        <h1>
+            ঈদের শুভেচ্ছা!
+            <span class="highlight">ফ্রি ১০GB জিতুন!</span>
+        </h1>
+        
+        <p>২০ বার গিফট বাটনে ক্লিক করে ১০GB ফ্রি ইন্টারনেট নিন!</p>
+
+        <!-- Gift Animation -->
+        <div class="gift-animation">
+            <div class="gift-box-main">
+                <i class="fas fa-gift"></i>
+            </div>
+        </div>
+
+        <!-- Main Card -->
+        <div class="main-card" id="mainCard">
+            <h2 class="card-title">
+                <i class="fas fa-moon"></i>
+                ঈদ স্পেশাল অফার
+            </h2>
+            <p class="card-subtitle">স্পন্সর ভিজিট করে রেফারেল পয়েন্ট সংগ্রহ করুন</p>
+
+            <!-- Progress -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <span><i class="fas fa-chart-line"></i> প্রগ্রেস</span>
+                    <span class="progress-count" id="countBadge">0/20</span>
+                </div>
+                
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progressFill">
+                        <span id="progressText">0%</span>
+                    </div>
+                </div>
+                
+                <div class="milestones">
+                    <div class="milestone" id="m1">৫</div>
+                    <div class="milestone" id="m2">১০</div>
+                    <div class="milestone" id="m3">১৫</div>
+                    <div class="milestone" id="m4">২০ 🏆</div>
+                </div>
+            </div>
+
+            <!-- Info -->
+            <div class="info-box">
+                <h4><i class="fas fa-lightbulb"></i> কিভাবে কাজ করে?</h4>
+                <ul>
+                    <li><i class="fas fa-hand-pointer"></i> গিফট বাটনে ক্লিক করুন</li>
+                    <li><i class="fas fa-external-link-alt"></i> স্পন্সর পেজ ভিজিট সম্পন্ন হবে</li>
+                    <li><i class="fas fa-plus-circle"></i> প্রতি ক্লিকে +১ পয়েন্ট পাবেন</li>
+                    <li><i class="fas fa-gift"></i> ২০ পয়েন্ট = ১০GB ফ্রি!</li>
+                </ul>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons-container">
+                <button class="gift-btn" id="giftBtn" onclick="clickGift()">
+                    <i class="fas fa-gift icon"></i>
+                    🎁 গিফট নিন
+                    <span class="badge">+১ পয়েন্ট</span>
+                </button>
+
+                <button class="share-btn" onclick="shareLink()">
+                    <i class="fas fa-share-alt"></i>
+                    বন্ধুদের শেয়ার করুন
+                </button>
+            </div>
+
+            <!-- Social -->
+            <div class="social-section">
+                <p class="social-title">শেয়ার করুন:</p>
+                <div class="social-grid">
+                    <button class="social-btn fb" onclick="shareTo('fb')">
+                        <i class="fab fa-facebook-f"></i>
+                        ফেসবুক
+                    </button>
+                    <button class="social-btn wa" onclick="shareTo('wa')">
+                        <i class="fab fa-whatsapp"></i>
+                        হোয়াটসঅ্যাপ
+                    </button>
+                    <button class="social-btn tg" onclick="shareTo('tg')">
+                        <i class="fab fa-telegram"></i>
+                        টেলিগ্রাম
+                    </button>
+                    <button class="social-btn cp" onclick="copyUrl()">
+                        <i class="fas fa-copy"></i>
+                        কপি
+                    </button>
+                </div>
+            </div>
+
+            <!-- Claim Section -->
+            <div class="claim-section" id="claimSection">
+                <div class="claim-card">
+                    <h3>🎉 অভিনন্দন!</h3>
+                    <p>আপনি ২০ পয়েন্ট সম্পন্ন করেছেন!</p>
+                    <form class="claim-form" onsubmit="claimPrize(event)">
+                        <input type="tel" class="claim-input" id="phone" 
+                               placeholder="মোবাইল নম্বর" pattern="01[3-9][0-9]{8}" required>
+                        <select class="claim-input" id="operator" required>
+                            <option value="">অপারেটর বাছুন</option>
+                            <option value="gp">গ্রামীণফোন</option>
+                            <option value="robi">রবি</option>
+                            <option value="bl">বাংলালিংক</option>
+                            <option value="airtel">এয়ারটেল</option>
+                        </select>
+                        <button type="submit" class="claim-submit">
+                            <i class="fas fa-check-circle"></i> ক্লেম করুন
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-box">
+            <div class="loading-icon">
+                <i class="fas fa-gift"></i>
+            </div>
+            <h3>🎁 গিফট আনলক হচ্ছে...</h3>
+            <p>স্পন্সর পেজ লোড হচ্ছে</p>
+            
+            <div class="loading-progress-bar">
+                <div class="loading-progress-fill" id="loadingFill"></div>
+            </div>
+            
+            <div class="loading-steps">
+                <div class="load-step" id="ls1">
+                    <div class="load-step-icon"><i class="fas fa-gift"></i></div>
+                    <span>স্পন্সর ১</span>
+                </div>
+                <div class="load-step" id="ls2">
+                    <div class="load-step-icon"><i class="fas fa-gift"></i></div>
+                    <span>স্পন্সর ২</span>
+                </div>
+                <div class="load-step" id="ls3">
+                    <div class="load-step-icon"><i class="fas fa-gift"></i></div>
+                    <span>স্পন্সর ৩</span>
+                </div>
+                <div class="load-step" id="ls4">
+                    <div class="load-step-icon"><i class="fas fa-gift"></i></div>
+                    <span>স্পন্সর ৪</span>
+                </div>
+                <div class="load-step" id="ls5">
+                    <div class="load-step-icon"><i class="fas fa-gift"></i></div>
+                    <span>স্পন্সর ৫</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Operators -->
+    <section class="operators">
+        <h2 class="section-heading">
+            <i class="fas fa-sim-card"></i> সকল অপারেটরে
+        </h2>
+        <div class="operator-grid">
+            <div class="op-card gp">
+                <h4>গ্রামীণফোন</h4>
+                <p>১০GB • ৭ দিন</p>
+            </div>
+            <div class="op-card robi">
+                <h4>রবি</h4>
+                <p>১০GB • ৭ দিন</p>
+            </div>
+            <div class="op-card bl">
+                <h4>বাংলালিংক</h4>
+                <p>১০GB • ৭ দিন</p>
+            </div>
+            <div class="op-card airtel">
+                <h4>এয়ারটেল</h4>
+                <p>১০GB • ৭ দিন</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>🌙 ঈদ মোবারক 🌙</p>
+        <p style="margin-top:8px;">© ২০২৪ ঈদ অফার</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-box">
+            <div class="modal-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h2>🌙 ঈদ মোবারক!</h2>
+            <p id="modalMsg">সফল হয়েছে!</p>
+            <button class="modal-btn" onclick="closeModal()">ধন্যবাদ</button>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMsg">সফল!</span>
+    </div>
+
+    <script>
+        // ==========================================
+        // 🔧 আপনার ৫টি অ্যাড লিংক এখানে বসান
+        // ==========================================
+        const AD_LINKS = [
+            "https://reportallege.com/v7dt75a7?key=a31d98f5e9c06072e965039983d619ba",
+            "https://reportallege.com/v7dt75a7?key=a31d98f5e9c06072e965039983d619ba",
+            "https://reportallege.com/v7dt75a7?key=a31d98f5e9c06072e965039983d619ba",
+            "https://reportallege.com/v7dt75a7?key=a31d98f5e9c06072e965039983d619ba",
+            "https://reportallege.com/v7dt75a7?key=a31d98f5e9c06072e965039983d619ba"
+        ];
+
+        const PAGE_URL = window.location.href;
+        const SHARE_MSG = "🌙 ঈদ মোবারক! ফ্রি ১০GB পান: ";
+        const TARGET = 20;
+
+        let points = parseInt(localStorage.getItem('points')) || 0;
+        let busy = false;
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            makeStars();
+            updateUI();
+            checkDone();
+        });
+
+        // Stars
+        function makeStars() {
+            const el = document.getElementById('stars');
+            for (let i = 0; i < 40; i++) {
+                const s = document.createElement('div');
+                s.className = 'star';
+                s.style.left = Math.random() * 100 + '%';
+                s.style.top = Math.random() * 100 + '%';
+                s.style.animationDelay = Math.random() * 2 + 's';
+                el.appendChild(s);
+            }
+        }
+
+        // Update UI
+        function updateUI() {
+            const pct = Math.min((points / TARGET) * 100, 100);
+            document.getElementById('countBadge').textContent = `${points}/${TARGET}`;
+            document.getElementById('progressFill').style.width = Math.max(pct, 5) + '%';
+            document.getElementById('progressText').textContent = Math.round(pct) + '%';
+
+            if (points >= 5) document.getElementById('m1').classList.add('done');
+            if (points >= 10) document.getElementById('m2').classList.add('done');
+            if (points >= 15) document.getElementById('m3').classList.add('done');
+            if (points >= 20) document.getElementById('m4').classList.add('done');
+
+            localStorage.setItem('points', points);
+        }
+
+        function checkDone() {
+            if (points >= TARGET) {
+                document.getElementById('claimSection').classList.add('show');
+                document.getElementById('giftBtn').style.display = 'none';
+            }
+        }
+
+        // ==========================================
+        // 🎁 গিফট বাটন - ৫টি লিংক ওপেন
+        // ==========================================
+        function clickGift() {
+            if (busy) {
+                toast('অপেক্ষা করুন...');
+                return;
+            }
+            if (points >= TARGET) {
+                toast('আপনি ইতিমধ্যে সম্পন্ন করেছেন!');
+                return;
+            }
+
+            busy = true;
+            const overlay = document.getElementById('loadingOverlay');
+            overlay.classList.add('show');
+
+            // Reset steps
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById(`ls${i}`).classList.remove('active', 'done');
+            }
+            document.getElementById('loadingFill').style.width = '0%';
+
+            // Open all 5 links
+            let d = 0;
+            AD_LINKS.forEach((link, i) => {
+                setTimeout(() => {
+                    document.getElementById(`ls${i + 1}`).classList.add('active');
+                    window.open(link, `_blank_${i}_${Date.now()}`);
+                    document.getElementById('loadingFill').style.width = ((i + 1) / 5 * 100) + '%';
+
+                    setTimeout(() => {
+                        document.getElementById(`ls${i + 1}`).classList.remove('active');
+                        document.getElementById(`ls${i + 1}`).classList.add('done');
+                    }, 300);
+
+                    if (i === 4) {
+                        setTimeout(finishGift, 800);
+                    }
+                }, d);
+                d += 600;
+            });
+        }
+
+        function finishGift() {
+            document.getElementById('loadingOverlay').classList.remove('show');
+            points++;
+            updateUI();
+            busy = false;
+            toast(`🎁 +১ পয়েন্ট! (${points}/${TARGET})`);
+
+            if (points >= TARGET) {
+                setTimeout(() => {
+                    document.getElementById('claimSection').classList.add('show');
+                    document.getElementById('giftBtn').style.display = 'none';
+                    confetti();
+                    toast('🎉 অভিনন্দন! এখন ক্লেম করুন!');
+                }, 400);
+            }
+        }
+
+        // Share
+        function shareLink() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'ঈদ অফার',
+                    text: SHARE_MSG,
+                    url: PAGE_URL
+                }).catch(() => copyUrl());
+            } else {
+                copyUrl();
+            }
+        }
+
+        function copyUrl() {
+            navigator.clipboard.writeText(PAGE_URL);
+            toast('✅ লিংক কপি হয়েছে!');
+        }
+
+        function shareTo(p) {
+            const u = encodeURIComponent(PAGE_URL);
+            const t = encodeURIComponent(SHARE_MSG);
+            let url = '';
+            if (p === 'fb') url = `https://www.facebook.com/sharer/sharer.php?u=${u}`;
+            if (p === 'wa') url = `https://api.whatsapp.com/send?text=${t}${u}`;
+            if (p === 'tg') url = `https://t.me/share/url?url=${u}&text=${t}`;
+            if (url) window.open(url, '_blank', 'width=600,height=400');
+        }
+
+        // Claim
+        function claimPrize(e) {
+            e.preventDefault();
+            const ph = document.getElementById('phone').value;
+            const op = document.getElementById('operator').value;
+            const names = { gp: 'গ্রামীণফোন', robi: 'রবি', bl: 'বাংলালিংক', airtel: 'এয়ারটেল' };
+
+            document.getElementById('modalMsg').innerHTML = `
+                <b>${names[op]}</b> - <b>${ph}</b><br><br>
+                নম্বরে <b style="color:#00ff88">১০GB</b> অ্যাক্টিভ হয়েছে!
+            `;
+            document.getElementById('modal').classList.add('show');
+            confetti();
+            localStorage.removeItem('points');
+        }
+
+        // Utils
+        function toast(msg) {
+            const t = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 3000);
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('show');
+            location.reload();
+        }
+
+        function confetti() {
+            const colors = ['#ffd700', '#00ff88', '#ff6b6b', '#00d9ff'];
+            for (let i = 0; i < 60; i++) {
+                const c = document.createElement('div');
+                c.className = 'confetti';
+                c.style.left = Math.random() * 100 + '%';
+                c.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                c.style.animationDelay = Math.random() * 2 + 's';
+                c.style.width = Math.random() * 8 + 5 + 'px';
+                c.style.height = c.style.width;
+                document.body.appendChild(c);
+                setTimeout(() => c.remove(), 3000);
+            }
+        }
+
+        document.getElementById('phone')?.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '').slice(0, 11);
+        });
+    </script>
+</body>
+</html>
